@@ -26,6 +26,9 @@ def time_view(request):
 
 
 def workdir_view(request):
+    template_name = "app/workdir.html"
     list_dir = os.listdir()
-    msg = f'В директоории проекта следующие файлы: {list_dir}'
-    return HttpResponse(msg)
+    context = {
+        'list_dir': list_dir
+    }
+    return render(request, template_name, context)

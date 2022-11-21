@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список файлов в рабочей директории</title>
+</head>
+<body>
+<p>В рабочей директории следующие файлы и папки:</p>
+<ul>
+        {% for e in list_dir %}
+        <li>{{ e }}</li>
+        {% endfor %}
+</ul>
+</body>
+</html>
